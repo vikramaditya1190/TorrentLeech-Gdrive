@@ -75,7 +75,7 @@ if __name__ == "__main__" :
     #
     incoming_message_handler = MessageHandler(
         incoming_message_f,
-        filters=filters.command([f"{LEECH_COMMAND}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([LEECH@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_message_handler)
     #
@@ -117,51 +117,51 @@ if __name__ == "__main__" :
     #
     incoming_youtube_dl_handler = MessageHandler(
         incoming_youtube_dl_f,
-        filters=filters.command([f"{YTDL_COMMAND}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([YTDL@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_dl_handler)
     #
     incoming_youtube_playlist_dl_handler = MessageHandler(
         g_yt_playlist,
-        filters=filters.command([f"{PYTDL_COMMAND_G}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([PYTDL@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_youtube_playlist_dl_handler)
     #
     status_message_handler = MessageHandler(
         status_message_f,
-        filters=filters.command([f"{STATUS_COMMAND}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([STATUS@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(status_message_handler)
     #
     cancel_message_handler = MessageHandler(
         cancel_message_f,
-        filters=filters.command([f"{CANCEL_COMMAND_G}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([CANCEL@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(cancel_message_handler)
     #
     exec_message_handler = MessageHandler(
         exec_message_f,
-        filters=filters.command(["exec"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([exec@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(exec_message_handler)
     #
     '''
     eval_message_handler = MessageHandler(
         eval_message_f,
-        filters=filters.command(["eval"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([eval@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(eval_message_handler)
     '''
     #
     rename_message_handler = MessageHandler(
         rename_tg_file,
-        filters=filters.command(["rename"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([rename@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(rename_message_handler)
     #
     upload_document_handler = MessageHandler(
         upload_document_f,
-        filters=filters.command([f"{UPLOAD_COMMAND}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([UPLOAD@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(upload_document_handler)
     #
@@ -173,7 +173,7 @@ if __name__ == "__main__" :
     #
     help_text_handler = MessageHandler(
         help_message_f,
-        filters=filters.command(["help"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([help@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(help_text_handler)
     #
@@ -196,13 +196,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=filters.command([f"{SAVE_THUMBNAIL}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([SAVETHUMBNAIL@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=filters.command([f"{CLEAR_THUMBNAIL}"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command([CLEARTHUMBNAIL@LeechXLbot]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(clear_thumb_nail_handler)
     #
